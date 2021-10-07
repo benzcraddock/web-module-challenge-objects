@@ -46,10 +46,18 @@ Using the burger object below do the following:
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
 const burger = {
-  name: "Burger", 
-  price: 18, 
-  category: "Lunch", 
-  
+  // name: "Burger", 
+  // price: 18, 
+  // category: "Lunch", 
+  // discount: function(teacher, student, public){
+  //   if(burger['teacher'] === teacher){
+  //     return burger['price' * .25];
+  //   } else if(burger['student'] === student){
+  //     return burger['price' * .25];
+  //   } else if(burger['public'] === public){
+  //     return burger['public' * .10];
+  //   }
+  // }
 }
 
 
@@ -71,7 +79,7 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
-
+console.log(reviews[5].feedback);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
