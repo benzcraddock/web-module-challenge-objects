@@ -49,21 +49,18 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  // discount: function(string){
-  //   if(string === 'teacher'){
-  //     return burger['price'] * .25;
-  //   } else if(string === 'student'){
-  //     return burger['price'] * .25;
-  //   } else if(string === 'public'){
-  //     return burger['public'] * .10;
-  //   }
-  // }
+  discount: function(string){
+    if(string === "teacher" || string === "student"){
+      return this.price - 4.5;
+    } else if(string === "public"){
+      return this.price - 1.8;
+    }
+  }
 }
 
-// burger.discount('teacher');
-// burger.discount('student');
-// burger.discount('public');
-
+console.log(burger.discount("teacher"));
+console.log(burger.discount("student"));
+console.log(burger.discount("public"));
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
