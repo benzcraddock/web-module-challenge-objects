@@ -46,20 +46,23 @@ Using the burger object below do the following:
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
 const burger = {
-  // name: "Burger", 
-  // price: 18, 
-  // category: "Lunch", 
-  // discount: function(teacher, student, public){
-  //   if(burger['teacher'] === teacher){
-  //     return burger['price' * .25];
-  //   } else if(burger['student'] === student){
-  //     return burger['price' * .25];
-  //   } else if(burger['public'] === public){
-  //     return burger['public' * .10];
+  name: "Burger", 
+  price: 18, 
+  category: "Lunch", 
+  // discount: function(string){
+  //   if(string === 'teacher'){
+  //     return burger['price'] * .25;
+  //   } else if(string === 'student'){
+  //     return burger['price'] * .25;
+  //   } else if(string === 'public'){
+  //     return burger['public'] * .10;
   //   }
   // }
 }
 
+// burger.discount('teacher');
+// burger.discount('student');
+// burger.discount('public');
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -88,9 +91,8 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 
-
-
-
+reviews[7].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';
+console.log(reviews);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that creates an object with name, rating, feedback, add the new review to the end of an array and returns the resulting array
@@ -101,9 +103,13 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
+function addReview(array, name, rating, feedback){
+  array.push({name, rating, feedback});
+  return array;
 }
+
+console.log(addReview(reviews, 'Daniela', 5, 'Beautiful atmosphere and wonderful vegan options!'));
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -116,11 +122,15 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(number){
+  // for(let i = 0; i < reviews.length; i++){
+  //   if(reviews[i][number] === number){
+  //     return `${reviews[i]['name']} gave the restaurant a ${reviews[i]['rating']} star review, and their feedback was: ${reviews[i]['feedback']}`
+  //   }
+  // }
 }
 
-
+// console.log(getReviewByIndex(1));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
